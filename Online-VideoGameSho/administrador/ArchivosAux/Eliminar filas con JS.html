@@ -1,0 +1,126 @@
+<html>
+
+
+ <head>
+  <title>Eliminación de fila con Jquery</title>
+
+
+<style>
+     #mensaje{
+         text-align: left;  
+     }
+     .boton{
+        cursor: pointer;
+     }
+</style>
+
+<script src="Jquery/jquery-3.3.1.min.js"></script>
+
+<script>
+   
+function eliminaimagen(id){
+    if(confirm("¿Quieres eliminar la fila completa?")){ //Función para generar una ventana de confirmación
+        $('#mensaje').html('<img src="Imagenes/loader.gif"/>');
+        setTimeout("$('#mensaje').html('');",2000);
+        $('#imagen'+id).hide();
+    }
+    else{
+        return;
+    }
+}
+
+</script>
+
+ </head>
+ 
+ <body>
+		
+    <p><br>¡Bienvenidos al mejor top de bicicletas en la modalidad Downhill! :)<br>
+    <br>
+    OJOOOO solo es una opinión personal ¡peace!<br>
+    <br>
+    ¡Haga click en las imagenes o en los nombres para ir a sus páginas oficiales!, o presione la opción DELETE para eliminar la fila corrrespondiente.<br>
+    </p>
+
+    <div id="mensaje"></div><br>
+
+    <table border="3" width="1000" bgcolor="d9c5f3">
+        <tr>
+            <td align="center" height="50" colspan="3"> Top 5 bicicletas de downhill con los mejores diseños</td>
+        </tr>
+        <tr class="imagen1" id="imagen1">
+            <td height="250" align="center" valign="middle"> 
+                <a href="https://www.specialized.com/es/es/demo" target="_blank">
+                <img src="imagenes/Demo.jpg" width="409" height="324"></a> 
+            </td>
+            <td height="250" align="center" valign="middle">  
+                <a href="https://www.specialized.com/es/es/demo" target="_blank"> N.5 Specialized Demo 8 2024 </a>
+            </td>
+            <td width="250" align="center" valign="middle"> 
+                <div> Delete bike from the list </div>
+                <br>
+                <input class="boton" onclick="eliminaimagen(1);" type="submit" value="Delete" > 
+            </td>
+        </tr>
+        <tr class="imagen2" id="imagen2">
+            <td height="250" align="center" valign="middle">
+                <a href="https://www.santacruzbicycles.com/en-EU/bikes/v10" target="_blank">
+                <img src="imagenes/SantaV10.png" width="400" height="300"></a>
+            </td>
+            <td height="250" align="center" valign="middle"> 
+                <a href="https://www.santacruzbicycles.com/en-EU/bikes/v10" target="_blank"> N.4 Santa Cruz V10 (all years)</a>
+            </td>
+            <td align="center" valign="middle"> 
+                <div class="imagen" id="Santa"> Delete bike from the list </div>
+                <br>
+                <input class="boton" onclick="eliminaimagen(2);" type="submit" value="Delete" > 
+            </td>
+        </tr>
+        <tr class="imagen3" id="imagen3">
+            <td height="250" align="center" valign="middle">
+                <a href="https://www.commencal.com/mx-es/bike/bikes/downhill/" target="_blank">
+                <img src="imagenes/ComSup.jpg" width="400" height="266"></a>
+            </td>
+            <td height="250" align="center" valign="middle"> 
+                <a href="https://www.commencal.com/mx-es/bike/bikes/downhill/" target="_blank"> N.3 Commencal Supreme v4 2023</a>
+            </td>
+            <td align="center" valign="middle"> 
+                <div class="imagen" id="Come"> Delete bike from the list </div>
+                <br>
+                <input class="boton"  onclick="eliminaimagen(3);" type="submit" value="Delete" > 
+            </td>
+        </tr>
+        <tr class="imagen4" id="imagen4">
+            <td height="250" align="center" valign="middle">
+                <a href="https://www.yt-industries.com/es/productos/outlet-sale/432/tues-pro-race/" target="_blank">
+                <img src="imagenes/YTues.jpg" width="450" height="250"></a></td>
+            <td height="250" align="center" valign="middle">
+                <a href="https://www.yt-industries.com/es/productos/outlet-sale/432/tues-pro-race/" target="_blank">N.2 YT tues Pro Race 2024</a>
+            </td>
+            <td align="center" valign="middle"> 
+                <div class="imagen" id="Waiti"> Delete bike from the list </div>
+                <br>
+                <input class="boton" onclick="eliminaimagen(4);" type="submit" value="Delete" > 
+            </td>
+        </tr>
+        <tr class="imagen5" id="imagen5">
+            <td height="250" align="center" valign="middle">
+                <a href="https://www.norco.com/bikes/mountain/" target="_blank">
+                <img src="imagenes/NorcoAu.jpg" width="448" height="252"></a></td></td>
+            <td height="250" align="center" valign="middle"> 
+                <a href="https://www.norco.com/bikes/mountain/" target="_blank">N.1 Norco Aurum 2022</a>
+            </td>
+            <td align="center" valign="middle"> 
+                <div class="imagen" id="Norco"> Delete bike from the list </div>
+                <br>
+                <input class="boton"  onclick="eliminaimagen(5);" type="submit" value="Delete" > 
+            </td>
+        </tr>
+
+    </table>
+
+
+</body>
+
+
+</html>
